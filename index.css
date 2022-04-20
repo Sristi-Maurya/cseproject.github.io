@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION BAR */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(34deg 100% 62% / 39%);
+}
+
+.nav h1 {
+    padding: 0px 40px;
+    font-size: 2rem;
+}
+
+.nav button {
+    float: right;
+}
+
+.nav span {
+    color: red;
+}
+
+.nav .logo {
+    margin: 10px;
+}
+
+.nav .logo img {
+    height: 90px;
+    border-radius: 200px;
+}
+
+.nav button {
+    padding: 10px 5px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.nav button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* JAVA SCRIPT FUNCTION */
+.dark-mode {
+    background-color: rgba(0, 0, 0, 0.818);
+    color: white;
+}
+
+/* GALLERY LAYOUT */
+.mainimg {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+}
+
+.mainimg .pic {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0px 5px;
+}
+
+
+.mainimg .pic img {
+    margin-top: 10px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    background-color: hsl(34deg 100% 62% / 39%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(255, 183, 0);
+    font-size: 1rem;
+}
+
+.active {
+    font-size: 1.2rem;
+    background-color: white;
+    border: 5px solid white;
+}
+
+/* EFFECT */
+.pic img {
+    filter: grayscale(100%);
+    transition: filter 2s;
+}
+
+.mainimg img:hover {
+    filter: none;
+}
+
+
+
+/* THIS MAKES WEBSITE RESPONSIVE RESPONSIVE  */
+@media only screen and (max-width:550px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav .logo img {
+        height: 50px;
+    }
+
+    .nav h1 {
+        padding: 0px 20px;
+        font-size: 1.5rem;
+    }
+
+    .nav button {
+        padding: 7px 5px;
+        margin: 10px;
+        font-size: 0.5rem;
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mainimg .pic {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainimg .pic {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
